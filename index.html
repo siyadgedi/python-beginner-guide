@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> 
+    <title>Python Guide</title>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <header><span class="iconify" data-icon="fa-brands:python" data-inline="false"></span><b> Python Beginner Guide</b></header>
+      <a href="#Introduction">Introduction</a>
+      <a href="#Hello_World">Hello World</a>
+      <a href="#Indentation">Indentation</a>
+      <a href="#Variables">Variables</a>
+      <a href="#Comments">Comments</a>
+      <a href="#Data_Types">Data Types</a>
+      <a href="#Lists">Lists</a><br>
+      <a href="#If_Else_Statements">If Else Statements</a><br>
+      <a href="#While_Loops">While Loops</a><br>
+      <a href="#For_Loops">For Loops</a><br>
+      <a href="#Functions">Functions</a>
+      <a href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+        <p>It is used for:</p>
+        <ul>
+          <li>web development (server-side),</li>
+          <li>software development,</li>
+          <li>mathematics,</li>
+          <li>system scripting.</li>
+        </ul>
+        <p>Python is different from other programming languages in the following ways:</p>
+        <ul>
+          <li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+          <li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
+          <li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
+        </ul>
+        <p>This guide will include code snippets and outputs in Python as examples of the topic being disscussed.</p>
+        <code>
+          <pre>
+Normal code will be displayed in this color.
+<span style="color:red">Code with errors will be displayed in this color.</span>
+<span style="color:orange;">The outputs of the green code will be displayed in this color.</span>
+<span style="color:blue;">Comments will be displayed in this color.</span>
+        </pre></code>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <p>Here is what outputting the string "Hello World" looks like in Python:</p>
+        <code>print("Hello World")</code>
+      </section>
+      <section class="main-section" id="Indentation">
+        <header>Indentation</header>
+        <p>Indentation refers to the spaces at the beginning of a code line. <br><br>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br><br>Python uses indentation to indicate a block of code.</p>
+        <p>Example:</p>
+        <code>
+          <pre>if 5 > 2:
+    print("Five is greater than two!")
+        </pre></code>
+        <p>Python will give you a <b>Syntax error</b> if you skip the indentation:</p>
+        <code>
+          <pre class="error">if 5 > 2:
+print("Five is greater than two!")
+        </pre></code>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>In Python, variables are created when you assign a value to it:</p>
+        <p>Variables in Python:</p>
+        <code>
+          <pre>x = 5
+y = "Hello World"
+        </pre></code>
+      </section>
+      <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <p>Python has commenting capability for the purpose of in-code documentation.</p>
+        <p>Comments start with a #, and Python will render the rest of the line as a comment: </p>
+        <code>
+          <pre><span style="color:blue">#This is a comment.</span>
+print("Hello World")
+        </pre></code>
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>In programming, data type is an important concept.</p>
+        <p>Variables can store data of different types, and different types can do different things.</p>
+        <p>Python has the following data types built-in by default, in these categories:</p>
+        <ul>
+          <li>Text Type: <code>str</code></li>
+          <li>Numeric Types: <code>int</code>, <code>float</code>, <code>complex</code></li>
+          <li>Sequence Types: <code>list</code>, <code>tuple</code>, <code>range</code></li>
+          <li>Mapping Type: <code>dict</code></li>
+          <li>Set Types: <code>set</code>, <code>frozenset</code></li>
+          <li>Boolean Type: <code>bool</code></li>
+          <li>Binary Types: <code>bytes</code>, <code>bytearray</code>, <code>memoryview</code></li>
+        </ul>
+        <p>You can get the data type of any object by using the <code>type()</code> function:</p>
+        <code>
+          <pre>x = 5
+print(type(x))
+<code style="color:orange;">&lt;class 'int'&gt;</code>
+        </pre></code>
+      </section>
+      <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <p>A list is a collection which is ordered and changeable. In Python lists are written with square brackets.</p>
+        <code>
+          <pre>thislist = ["apple", "orange", "banana"]
+        </pre></code>
+        <p>You access the list items by referring to the index number:</p>
+        <code>
+          <pre>thislist = ["apple", "orange", "banana"]
+print(thislist[0])
+<code style="color:orange;">apple</code>
+        </pre></code>
+        <p><b>Negative indexing</b> means beginning from the end, -1 refers to the last item, -2 refers to the second last item etc.</p>
+        <code>
+          <pre>thislist = ["apple", "orange", "banana"]
+print(thislist[-1])
+<code style="color:orange;">banana</code>
+        </pre></code>
+      </section>
+      <section class="main-section" id="If_Else_Statements">
+        <header>If Else Statements</header>
+        <p>Python supports the usual logical conditions from mathematics:</p>
+        <ul>
+          <li>Equals: <code>a == b</code></li>
+          <li>Not Equals: <code>a != b</code></li>
+          <li>Less Than: <code>a < b</code></li>
+          <li>Less than or equal to: <code>a <= b</code></li>
+          <li>Greater Than: <code>a > b</code></li>
+          <li>Greater than or equal to: <code>a >= b</code></li>
+        </ul>
+        <p>The <code>if</code> keyword lets you execute specific lines of code only if certain conditions defined by you are met.</p>
+        <p>The <code>else</code> keyword catches anything which isn't caught by the preceding conditions.</p>
+        <p>The <code>elif</code> keyword is pythons way of saying "if the previous conditions were not true, then try this condition".</p>
+        <code>
+          <pre>
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+<code style="color: orange;">a is greater than b</code>
+          </pre>
+        </code>
+      </section>
+      <section class="main-section" id="While_Loops">
+        <header>While Loops</header>
+        <p>With the <code>while</code> loop we can execute a set of statements as long as a condition is true.</p>
+        <code>
+          <pre>
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+<code style="color: orange;">1<br>2<br>3<br>4<br>5</code>
+          </pre>
+        </code>
+      </section>
+      <section class="main-section" id="For_Loops">
+        <header>For Loops</header>
+        <p>A <code>for</code> loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
+        <p>With the <code>for</code> loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+        <code>
+          <pre>
+thislist = ["apple", "orange", "banana"]
+for x in fruits:
+  print(x)
+<code style="color: orange;">apple<br>orange<br>banana</code>
+          </pre>
+        </code>
+        <p>Even strings are iterable objects, they contain a sequence of characters:</p>
+        <code>
+          <pre>
+for x in "banana":
+  print(x)
+<code style="color: orange;">b<br>a<br>n<br>a<br>n<br>a</code>
+          </pre>
+        </code>
+      </section>
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>A function is a block of code which only runs when it is called.
+
+          You can pass data, known as parameters, into a function, and it can return data as a result.</p>
+        <p>In Python a function is defined using the def keyword:</p>
+        <code>
+          <pre>
+def my_function():
+  print("Hello from a function") 
+          </pre>
+        </code>
+        <p>To call a function, use the function name followed by parenthesis:</p>
+        <code>
+          <pre>
+def my_function():
+  print("Hello from a function")
+
+my_function()
+<code style="color: orange;">Hello from a function</code>
+          </pre>
+        </code>
+        <p>To customize the outputs of functions, information can be passed into functions as <b>arguments.</b> Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.</p>
+        <code>
+          <pre>
+def my_function(name):
+  print(name + " is my favorite programming language!") 
+
+my_function("Python")
+<code style="color: orange;">Python is my favorite programming language!</code>
+my_function("Java")
+<code style="color: orange;">Java is my favorite programming language!</code>
+          </pre>
+        </code>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>Most of the information on this page is from <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3 Schools</a></p>
+      </section>
+      <footer id="credit">
+        <p>Created by <a id="siyad" href='https://github.com/siyadgedi/' target="_blank">Siyad Gedi</a></p>
+      </footer>
+    </main>
+    
+  </body>
+</html>
+
+
+
+    
